@@ -1,0 +1,59 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg
+*.egg-info
+dist/
+build/
+*.egg-info/
+*.eggs/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.env/
+*.env
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Test and coverage reports
+.coverage
+*.cover
+*.log
+nosetests.xml
+coverage.xml
+*.hypothesis/
+.pytest_cache/
+
+# Local configuration files
+*.local
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# SQLAlchemy
+*.db
+
+# Sphinx documentation
+docs/_build/
+
+# Environment variables
+.env
+.envrc
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Log files
+*.log
