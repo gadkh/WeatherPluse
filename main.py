@@ -1,16 +1,15 @@
-# This is a sample Python script.
+from app.db.db_handler import Base, engine
+from fastapi import FastAPI
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+Base.metadata.create_all(bind=engine)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+app = FastAPI(
+    title="Weather app",
+    debug=True,
+    description="Engine Behind Weather Social app",
+    version="0.1"
+)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# if __name__ == '__main__':
+#     print("Hello world")
