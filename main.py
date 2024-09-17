@@ -1,5 +1,6 @@
 from app.db.db_handler import Base, engine
 from fastapi import FastAPI
+from app.routes.api import router
 
 Base.metadata.create_all(bind=engine)
 
@@ -11,5 +12,4 @@ app = FastAPI(
     version="0.1"
 )
 
-# if __name__ == '__main__':
-#     print("Hello world")
+app.include_router(router)

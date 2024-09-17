@@ -29,4 +29,5 @@ class User(UserBase):
     created_dt: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+        # orm_mode = True
