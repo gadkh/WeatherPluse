@@ -15,4 +15,3 @@ class User(Base):
     dob = Column(Date)
     gender = Column(Enum(Gender))
     profile_pic = Column(String)
-
