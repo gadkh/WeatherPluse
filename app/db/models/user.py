@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Date, DateTime, Integer, String, Enum
-from ..db_handler import Base
+from ..session_handler import Base
 from datetime import datetime
 from .enums import Gender
 

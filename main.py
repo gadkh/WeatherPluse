@@ -1,4 +1,4 @@
-from app.db.db_handler import Base, engine
+from app.db.session_handler import Base, engine
 from fastapi import FastAPI
 from app.routes.api import router
 
