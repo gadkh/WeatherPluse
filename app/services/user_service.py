@@ -1,10 +1,6 @@
-from fastapi import Depends
-from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
 from passlib.context import CryptContext
-from jose import jwt, JWTError
-from datetime import datetime, timedelta
 from ..db.models.user import User
 from ..schemas.user import UserCreate, UserUpdate
 from typing import Optional

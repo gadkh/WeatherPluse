@@ -2,6 +2,7 @@ from sqlalchemy import Column, Date, DateTime, Integer, String, Enum
 from ..session_handler import Base
 from datetime import datetime
 from .enums import Gender
+from sqlalchemy.orm import relationship
 
 
 class User(Base):
@@ -15,3 +16,4 @@ class User(Base):
     dob = Column(Date)
     gender = Column(Enum(Gender))
     profile_pic = Column(String)
+    posts = relationship("Post", back_populates="author")

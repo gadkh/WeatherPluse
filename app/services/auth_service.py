@@ -30,7 +30,7 @@ async def get_current_user(db: Session, token: str = Depends(oauth2_bearer)) -> 
         username: str = payload.get("sub")
         id: int = payload.get("id")
         expire: datetime = payload.get("exp")
-        if datetime(expire) < datetime.utcnow():
+        if datetime.fromtimestamp(expire) < datetime.utcnow():
             return None
         if username is None or id is None:
             return None
